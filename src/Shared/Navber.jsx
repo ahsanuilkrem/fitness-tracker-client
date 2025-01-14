@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navber = () => {
     const linke = <>
@@ -45,7 +45,10 @@ const Navber = () => {
         <div className="navbar-end">
             
            
-         <button>login</button>
+         <Link to='login'>
+         <button className='btn'>login</button>
+         </Link> 
+         
 
         </div>
     </div>
