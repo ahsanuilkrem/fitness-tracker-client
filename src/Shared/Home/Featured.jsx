@@ -5,6 +5,11 @@ import { IoFitnessSharp } from 'react-icons/io5';
 
 const Featured = () => {
     return (
+        <>
+        <div className=' mt-12'>
+            <h2 className='text-2xl font-bold text-center'> Fitness Programmes At Syncfit </h2>
+            <p className='text-xs font-mono text-center'>if you wont to be fit, you need to start today</p>
+        </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5 items-center' >
             <div>
                 <FaDumbbell size={30}></FaDumbbell>
@@ -51,6 +56,7 @@ const Featured = () => {
             </div>
 
         </div>
+        </>
     );
 };
 
