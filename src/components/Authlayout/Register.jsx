@@ -1,51 +1,59 @@
 import Lottie from 'lottie-react';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import lottiRegister from '../../assets/Lotti_regster.json'
+import { AuthContext } from './Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Register = () => {
     const { register, handleSubmit, reset, formState: { errors }, } = useForm();
+    const { currentuser, updateUserProfile} = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const onSubmit = (data) => {
         console.log(data);
-        // currentuser(data.email, data.password)
-        // .then(result => {
-        //     const loggedUser = result.user;
-        //     console.log(loggedUser);
-        //     updateUserProfile(data.name, data.photoURL)
-        //     .then(() => {
-        //         // console.log('user profile info updated')
-        //         const userInfo ={
-        //             name: data.name,
-        //             email: data.email,
+        currentuser(data.email, data.password)
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            updateUserProfile(data.name, data.photoURL)
+            .then(() => {
+                console.log('user profile info updated')
 
-        //         }
-        //         axiosPublic.post('/users', userInfo)
-        //         .then(res => {
-        //             if(res.data.insertedId){
-        //                 console.log('user add to databise')
-        //                 reset();
-        //                 Swal.fire({
-        //                     position: "top-end",
-        //                     icon: "success",
-        //                     title: "user created successfully",
-        //                     showConfirmButton: false,
-        //                     timer: 1500
-        //                   });
-        //                   navigate('/');
-        //             }
-        //         })
+                // const userInfo ={
+                //     name: data.name,
+                //     email: data.email,
+
+                // }
             
-        //     })
-        //     .catch(error => console.log(error))
-        // }) 
-        
-       
+                    
+                // axiosPublic.post('/users', userInfo)
+                //  .then(res => {        
+                // })   .then(res => {
+                //     if(res.data.insertedId){
+                //         console.log('user add to databise')
+                //         reset();
+                //         Swal.fire({
+                //             position: "top-end",
+                //             icon: "success",
+                //             title: "user created successfully",
+                //             showConfirmButton: false,
+                //             timer: 1500
+                //           });
+                         navigate('/');
+                //     }
+                
+            
+                })          
+
+            .catch(error => console.log(error))
+        })
     }
 
 
+ 
     return (
         <>
         <Helmet>
@@ -57,7 +65,7 @@ const Register = () => {
                  <Lottie animationData={lottiRegister}nimat></Lottie>
                 </div>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                <h1 className="text-2xl font-bold text-center">SignUp now!</h1>
+                <h1 className="text-2xl font-bold text-center mt-3">SignUp now!</h1>
                     <form  onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -110,6 +118,6 @@ const Register = () => {
     );
 };
 
+
 export default Register;
 
-//  onSubmit={handleSubmit(onSubmit)}

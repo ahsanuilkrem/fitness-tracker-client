@@ -5,6 +5,8 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home";
 import Login from "../components/Authlayout/Login";
 import Register from "../components/Authlayout/Register";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import PrivateRoute from "./PrivateRoute";
 
 
   const router = createBrowserRouter([
@@ -23,6 +25,12 @@ import Register from "../components/Authlayout/Register";
         {
           path: 'register',
           element: <Register></Register>
+        },
+        {
+          path: 'dashboard',
+          element: <PrivateRoute>
+            <Dashboard></Dashboard>
+          </PrivateRoute>
         }
      
        
