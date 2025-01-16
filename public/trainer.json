@@ -1,0 +1,69 @@
+[
+    {
+      "trainer_name": "John Doe",
+      "profile_image": "https://i.ibb.co.com/C6t2KD1/fitness-1.jpg",
+      "years_of_experience": 5,
+      "available_slots": [
+        "Monday 8:00 AM - 10:00 AM",
+        "Wednesday 3:00 PM - 5:00 PM",
+        "Friday 7:00 AM - 9:00 AM"
+      ],
+      "other_info": "Specializes in strength training and weight loss."
+    },
+    {
+      "trainer_name": "Jane Smith",
+      "profile_image": "https://i.ibb.co.com/C6t2KD1/fitness-1.jpg",
+      "years_of_experience": 8,
+      "available_slots": [
+        "Tuesday 9:00 AM - 12:00 PM",
+        "Thursday 4:00 PM - 6:00 PM",
+        "Saturday 10:00 AM - 12:00 PM"
+      ],
+      "other_info": "Certified yoga and Pilates instructor."
+    },
+    {
+      "trainer_name": "Mike Johnson",
+      "profile_image": "https://i.ibb.co.com/C6t2KD1/fitness-1.jpg",
+      "years_of_experience": 10,
+      "available_slots": [
+        "Monday 6:00 AM - 8:00 AM",
+        "Wednesday 1:00 PM - 3:00 PM",
+        "Friday 4:00 PM - 6:00 PM"
+      ],
+      "other_info": "Focuses on endurance training and marathon prep."
+    },
+    {
+      "trainer_name": "Sara Lee",
+      "profile_image": "https://i.ibb.co.com/C6t2KD1/fitness-1.jpg",
+      "years_of_experience": 3,
+      "available_slots": [
+        "Tuesday 7:00 AM - 9:00 AM",
+        "Thursday 5:00 PM - 7:00 PM",
+        "Sunday 8:00 AM - 10:00 AM"
+      ],
+      "other_info": "Certified personal trainer with a focus on HIIT."
+    },
+    {
+      "trainer_name": "David Kim",
+      "profile_image": "https://i.ibb.co.com/C6t2KD1/fitness-1.jpg",
+      "years_of_experience": 7,
+      "available_slots": [
+        "Monday 9:00 AM - 11:00 AM",
+        "Wednesday 2:00 PM - 4:00 PM",
+        "Saturday 12:00 PM - 2:00 PM"
+      ],
+      "other_info": "Expert in bodyweight exercises and functional fitness."
+    },
+    {
+      "trainer_name": "Emily Parker",
+      "profile_image": "https://i.ibb.co.com/C6t2KD1/fitness-1.jpg",
+      "years_of_experience": 4,
+      "available_slots": [
+        "Monday 5:00 PM - 7:00 PM",
+        "Thursday 6:00 AM - 8:00 AM",
+        "Saturday 9:00 AM - 11:00 AM"
+      ],
+      "other_info": "Specializes in prenatal fitness and postnatal recovery."
+    }
+  ]
+  

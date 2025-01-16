@@ -7,6 +7,8 @@ import Login from "../components/Authlayout/Login";
 import Register from "../components/Authlayout/Register";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import PrivateRoute from "./PrivateRoute";
+import AllTrainer from "../Pages/AllTrainer/AllTrainer";
+import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
 
 
   const router = createBrowserRouter([
@@ -17,6 +19,14 @@ import PrivateRoute from "./PrivateRoute";
         {
             path:'/',
             element: <Home></Home>
+        },
+        {
+          path: 'allTrainer',
+          element: <AllTrainer></AllTrainer>
+        },
+        {
+          path: '/trainer/:id',
+          element: <TrainerDetails></TrainerDetails>
         },
         {
           path: 'login',

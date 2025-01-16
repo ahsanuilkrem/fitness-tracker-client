@@ -11,7 +11,7 @@ const Navber = () => {
     }
     const linke = <>
         <li><NavLink to='/'>Home </NavLink></li>
-        <li><NavLink to='/allTriner'>All Trainer </NavLink></li>
+        <li><NavLink to='/allTrainer'>All Trainer </NavLink></li>
         <li><NavLink to='/All classes'>All Classes  </NavLink></li>
         <li><NavLink to='/commit'>Commit </NavLink></li>
         
