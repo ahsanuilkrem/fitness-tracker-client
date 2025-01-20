@@ -71,8 +71,9 @@ const Login = () => {
     return (
         <>
         <Helmet>
-            <title>Power Fitness | login</title>
-        </Helmet>
+             <title>Power Fitness | login</title>
+        </Helmet> 
+      
 
         <div className="hero bg-base-200 min-h-screen pt-9">     
             <div className="hero-content flex-col items-center lg:flex-row">

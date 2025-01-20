@@ -9,6 +9,8 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import PrivateRoute from "./PrivateRoute";
 import AllTrainer from "../Pages/AllTrainer/AllTrainer";
 import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
+import BeTrainer from "../Pages/Be_A_Trainer/BeTrainer";
+import AllTrainersAm from "../Pages/Dashboard/AdminPage/AllTrainersAm";
 
 
   const router = createBrowserRouter([
@@ -26,7 +28,12 @@ import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
         },
         {
           path: '/trainer/:id',
-          element: <TrainerDetails></TrainerDetails>
+          element: <TrainerDetails></TrainerDetails>,
+          
+        },
+        {
+          path: 'beTrainer',
+          element: <BeTrainer></BeTrainer>
         },
         {
           path: 'login',
@@ -35,17 +42,22 @@ import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
         {
           path: 'register',
           element: <Register></Register>
-        },
-        {
-          path: 'dashboard',
-          element: <PrivateRoute>
-            <Dashboard></Dashboard>
-          </PrivateRoute>
-        }
-     
-       
+        },       
       ]
     },
+    {
+      path: 'dashboard',
+      element: <PrivateRoute>
+        <Dashboard></Dashboard>
+      </PrivateRoute>,
+      children: [
+        {
+          path: 'adTrainers',
+          element: <AllTrainersAm></AllTrainersAm>
+        }
+      ]
+    },
+
   ]);
   
   export default router;
