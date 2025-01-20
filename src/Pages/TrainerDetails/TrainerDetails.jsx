@@ -34,7 +34,7 @@ const TrainerDetails = () => {
                 <h3 className='text-center text-3xl font-bold'>Trainer Details Page</h3>
 
                      <div>
-                        <Card className="w-full max-w-screen-md mx-auto">
+                        <Card className="w-full max-w-screen-lg mx-auto bg-slate-600 text-white">
 
 
 
@@ -45,8 +45,8 @@ const TrainerDetails = () => {
                                         src={photo}
                                         className="mb-3 rounded-full w-40 h-44 shadow-lg"
                                     />
-                                    <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">{name}</h5>
-                                    <span className="text-sm text-gray-500 dark:text-gray-400">Years of Experience:  {experience}</span>  
+                                    <h5 className="mb-1 text-xl font-medium  dark:text-white">{name}</h5>
+                                    <span className="text-md dark:text-gray-400">Years of Experience:  {experience}</span>  
                                     <p>Biography:{biography}</p>
                                   
                                 </div>

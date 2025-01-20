@@ -11,6 +11,7 @@ import AllTrainer from "../Pages/AllTrainer/AllTrainer";
 import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
 import BeTrainer from "../Pages/Be_A_Trainer/BeTrainer";
 import AllTrainersAm from "../Pages/Dashboard/AdminPage/AllTrainersAm";
+import AddClass from "../Pages/Dashboard/AdminPage/AddClass";
 
 
   const router = createBrowserRouter([
@@ -54,7 +55,11 @@ import AllTrainersAm from "../Pages/Dashboard/AdminPage/AllTrainersAm";
         {
           path: 'adTrainers',
           element: <AllTrainersAm></AllTrainersAm>
-        }
+        },
+        {
+          path: 'addClass',
+          element: <AddClass></AddClass>
+        },
       ]
     },
 

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import useTrainer from '../../hooks/useTrainer';
 
 
 const options = [
@@ -23,6 +24,7 @@ const BeTrainer = () => {
     const navigate = useNavigate();
     const [selectredOption, setSelectedOption] = useState([]);
     const [selectedSkills, setSelectedSkills] = useState([]);
+    const [, refetch] = useTrainer();
 
 
     const handleSelect = (selected) => {
@@ -63,22 +65,25 @@ const BeTrainer = () => {
         .then(res => {
             console.log(res.data)
             if(res.data.insertedId){
+                refetch();
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
-                    title: "Your work has been saved",
+                    title: "added to you Trainer",
                     showConfirmButton: false,
                     timer: 1500
                   });
+                  navigate('/alltrainer')
             }
                     
        });
+
        
     }
 
     return (
-        <div className=" md:max-w-4xl bg-slate-500 mx-auto pt-20">
-            <form onSubmit={handleSubmite} >
+        <div className=" md:max-w-4xl  pt-32 mx-auto">
+            <form onSubmit={handleSubmite} className='bg-slate-500'>
                 <div className='md:flex  w-full gap-4 p-3'>
                     <div className='md:w-1/2'>
                         <label >Name</label>
