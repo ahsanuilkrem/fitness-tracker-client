@@ -12,6 +12,8 @@ import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
 import BeTrainer from "../Pages/Be_A_Trainer/BeTrainer";
 import AllTrainersAm from "../Pages/Dashboard/AdminPage/AllTrainersAm";
 import AddClass from "../Pages/Dashboard/AdminPage/AddClass";
+import AllClasses from "../Pages/AllClasses/AllClasses";
+import AddForum from "../Pages/Dashboard/AdminPage/AddForum";
 
 
   const router = createBrowserRouter([
@@ -31,6 +33,10 @@ import AddClass from "../Pages/Dashboard/AdminPage/AddClass";
           path: '/trainer/:id',
           element: <TrainerDetails></TrainerDetails>,
           
+        },
+        {
+          path: 'allClasses',
+          element: <AllClasses></AllClasses>
         },
         {
           path: 'beTrainer',
@@ -59,6 +65,10 @@ import AddClass from "../Pages/Dashboard/AdminPage/AddClass";
         {
           path: 'addClass',
           element: <AddClass></AddClass>
+        },
+        {
+          path: 'addForum',
+          element: <AddForum></AddForum>
         },
       ]
     },

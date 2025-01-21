@@ -3,11 +3,11 @@ import { FaFacebook } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Trainer = ({ trainer }) => {
-    const { name, photo , experience, selectredOption, time ,_id } =  trainer || [];
+    const { name, photo, experience, selectredOption, time, _id } = trainer || [];
     console.log(trainer)
     return (
         <div>
-            <Card
+               <Card
                 className="max-w-sm"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
                 imgSrc={photo}
@@ -22,12 +22,10 @@ const Trainer = ({ trainer }) => {
                         selectredOption.map(option  => <li>{option.label} {time} </li>)
                     } 
                 </ul>
-                <h4 className='flex items-center gap-2 text-[18px] font-bold'>Socials links : <FaFacebook className='text-sky-500 text-xl font-bold'></FaFacebook> </h4>
-                    <Link to={`/trainer/${_id}`}>
+                     <Link to={`/trainer/${_id}`}>
                     <button className='btn btn-success'>Know more</button>
-                    </Link>
+                    </Link> 
             </Card>
-
         </div>
     );
 };

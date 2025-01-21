@@ -14,15 +14,15 @@ const Dashboard = () => {
              <li><NavLink to='/dashboard/Applied Trainer'>Applied Trainer </NavLink> </li>
              <li><NavLink to='/dashboard/Balance'>Balance</NavLink> </li>
              <li><NavLink to='/dashboard/addClass'>Add Class</NavLink> </li>
-            <li><NavLink to='/dashboard/userHome'>Add Forum</NavLink> </li>
+            <li><NavLink to='/dashboard/addForum'>Add Forum</NavLink> </li>
            
              
           
            
              <div className="divider"></div>
              <li><NavLink to='/'> <FaHome></FaHome>Home</NavLink> </li>
-             <li><NavLink to='/allTrainers'> <FaHome></FaHome>Trainers</NavLink> </li>
-             <li><NavLink to='/classes'> <FaHome></FaHome>Classes</NavLink> </li>
+             <li><NavLink to='/allTrainer'> <FaHome></FaHome>Trainers</NavLink> </li>
+             <li><NavLink to='/allClasses'> <FaHome></FaHome>Classes</NavLink> </li>
 
            
             </ul>

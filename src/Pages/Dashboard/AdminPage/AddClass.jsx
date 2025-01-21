@@ -12,7 +12,7 @@ const AddClass = () => {
     const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
     const onSubmit = async (data) => {
-        console.log(data)
+        // console.log(data)
         // image upload to imagbbi
         const imageFile = {image: data.image[0]}
         const res = await axiosPublic.post(image_hosting_api,imageFile, {
@@ -88,7 +88,5 @@ const AddClass = () => {
 export default AddClass;
 
 
-//   const classlist = await axiosSecure.post('/class', formItem);
-// console.log(classlist);
-// if(classlist.data.insertedId){
+
     
