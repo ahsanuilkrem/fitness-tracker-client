@@ -13,7 +13,7 @@ const Navber = () => {
         <li><NavLink to='/'>Home </NavLink></li>
         <li><NavLink to='/allTrainer'>All Trainer </NavLink></li>
         <li><NavLink to='/allClasses'>All Classes  </NavLink></li>
-        <li><NavLink to='/commit'>Commit </NavLink></li>
+        <li><NavLink to='/community'>Community </NavLink></li>
         
 
         <li>

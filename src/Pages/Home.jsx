@@ -4,6 +4,9 @@ import Featured from '../Shared/Home/Featured';
 import About from '../Shared/Home/About';
 import PopularClasses from '../Shared/Home/PopularClasses';
 import OurTeam from '../Shared/OurTeam';
+import Newsletter from '../Shared/Home/Newsletter';
+import Reviews from '../Shared/Home/Reviews';
+import Forum from '../Shared/Home/Forum';
 
 const Home = () => {
     return (
@@ -13,6 +16,9 @@ const Home = () => {
             <Featured></Featured>
             <About></About>
             <PopularClasses></PopularClasses>
+            <Reviews></Reviews>
+            <Forum></Forum>
+            <Newsletter></Newsletter>
             <OurTeam></OurTeam>
             </div>
         </div>

@@ -6,14 +6,17 @@ import { Link, useNavigate } from 'react-router-dom';
 import lottiRegister from '../../assets/Lotti_regster.json'
 import { AuthContext } from './Providers/AuthProvider';
 import Swal from 'sweetalert2';
+import SocialLogin from './SocialLogin';
+import useAxiosPublic from '../../hooks/useAxiosPublic';
 
 const Register = () => {
+    const axiosPublic = useAxiosPublic();
     const { register, handleSubmit, reset, formState: { errors }, } = useForm();
     const { currentuser, updateUserProfile} = useContext(AuthContext);
     const navigate = useNavigate();
 
     const onSubmit = (data) => {
-        console.log(data);
+        // console.log(data);
         currentuser(data.email, data.password)
         .then(result => {
             const loggedUser = result.user;
@@ -22,32 +25,29 @@ const Register = () => {
             .then(() => {
                 console.log('user profile info updated')
 
-                // const userInfo ={
-                //     name: data.name,
-                //     email: data.email,
+                const userInfo ={
+                     name: data.name,
+                    email: data.email,
 
-                // }
+                 }
             
                     
-                // axiosPublic.post('/users', userInfo)
-                //  .then(res => {        
-                // })   .then(res => {
-                //     if(res.data.insertedId){
-                //         console.log('user add to databise')
-                //         reset();
-                //         Swal.fire({
-                //             position: "top-end",
-                //             icon: "success",
-                //             title: "user created successfully",
-                //             showConfirmButton: false,
-                //             timer: 1500
-                //           });
+                 axiosPublic.post('/users', userInfo)
+                    .then(res => {
+                         if(res.data.insertedId){
+                         console.log('user add to databise')
+                         reset();
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: "user created successfully",
+                            showConfirmButton: false,
+                            timer: 1500
+                          });
                          navigate('/');
-                //     }
-                
-            
+                    }
                 })          
-
+            })
             .catch(error => console.log(error))
         })
     }
@@ -109,7 +109,7 @@ const Register = () => {
 
                         </div>
                     </form>
-                    {/* <SocialLogin></SocialLogin> */}
+                     <SocialLogin></SocialLogin>
                     <p className='mx-auto text-xl font-semibold p-2'> <small> Already have an account?  <Link to='/login' className="text-sky-600">Login</Link> </small></p>
                 </div>
             </div>

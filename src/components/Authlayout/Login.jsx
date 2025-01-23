@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import loginlotti from '../../assets/Lotti_Login.json';
 import { AuthContext } from './Providers/AuthProvider';
 import Swal from 'sweetalert2';
+import SocialLogin from './SocialLogin';
 
 
 
@@ -111,7 +112,7 @@ const Login = () => {
 
                         </div>
                     </form>
-                    {/* <SocialLogin></SocialLogin> */}
+                    <SocialLogin></SocialLogin> 
                     <p className='mx-auto text-xl font-semibold p-2'> <small>New Here? <Link to='/register' className='text-sky-600'>signUp</Link> </small></p>
                 </div>
 

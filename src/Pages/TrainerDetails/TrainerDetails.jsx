@@ -27,7 +27,7 @@ const TrainerDetails = () => {
     return (
         <>
             <Helmet>
-                <title>Power Fitness | TrainerDetail</title>
+                <title>Power Fitness | Trainer Details</title>
             </Helmet>
 
             <div className='pt-20'>
@@ -56,7 +56,9 @@ const TrainerDetails = () => {
                                     <ul>
                                         {selectredOption.length > 0 ? (
                                             selectredOption.map((slot, index) => (
-                                                <li key={index}>{slot.label} {time} </li>
+                                                <Link to='/trainerBooked'>
+                                                    <li key={index} className='hover:text-sky-500'>{slot.label} {time}  </li>
+                                                </Link>
                                             ))
                                         ) : (
                                             <li>No available slots</li>
