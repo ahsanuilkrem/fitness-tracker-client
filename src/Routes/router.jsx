@@ -23,12 +23,15 @@ import AdminRoute from "./AdminRoute";
 import TrainerRoute from "./TrainerRoute";
 import ManageSlots from "../Pages/Dashboard/TrainerPages/ManageSlots";
 import AddNewSlot from "../Pages/Dashboard/TrainerPages/AddNewSlot";
+import ErrorPage from "../Pages/ErrorPage";
+import Payment from "../Pages/Dashboard/Payment";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -50,7 +53,7 @@ const router = createBrowserRouter([
         element: <AllClasses></AllClasses>
       },
       {
-        path: 'trainerBooked',
+        path: '/trainerBooked/:id',
         element: <TrainerBooked></TrainerBooked>
       },
       {
@@ -60,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: 'beTrainer',
         element: <BeTrainer></BeTrainer>
+      },
+      {
+        path : 'payment',
+        element: <Payment></Payment>
       },
       {
         path: 'login',

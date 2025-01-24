@@ -6,23 +6,21 @@ import { Link, useParams } from 'react-router-dom';
 import useAddSlot from '../../hooks/useAddSlot';
 
 
-
-
-
-
-
-
 const TrainerDetails = () => {
     const [slote] = useAddSlot();
     const { id } = useParams();
     const { data: trainer = [] } = useQuery({
         queryKey: ["trainer", id],
         queryFn: async () => {
-            const { data } = await axios.get(`http://localhost:5000/trainer/${id}`)
+            const { data } = await axios.get(`http://localhost:5000/trainer/${id}`, {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('access-token')}`
+                }
+            })
             return data;
         }
     })
-    console.log(trainer);
+    // console.log(trainer);
     const { name, photo, experience, selectredOption = [], selectedSkills, time, hour, biography, _id } = trainer || [];
 
 
@@ -58,9 +56,11 @@ const TrainerDetails = () => {
 
                                     <div>
                                         {
-                                            slote.map(slot => <ul key={slot._id} className='flex gap-1'>
+                                            slote.map(slot => <ul key={slot._id} >
+                                                <Link to={`/trainerBooked/${slot._id}`} className='flex gap-1'>
                                                 <li>{slot.selectredOption.map((day, index) => <p key={index}>{day.label}</p>)}</li>
                                                 <li>{slot.time}</li>
+                                                </Link>
                                             </ul>)
                                         }
                                     </div>

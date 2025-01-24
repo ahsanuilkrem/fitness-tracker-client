@@ -96,7 +96,7 @@ const AddNewSlot = () => {
                 </div>
                 <div className='md:flex  w-full gap-4 p-3'>
                     <div className='  md:w-1/2'>
-                        <label >Select Slot Name</label>
+                        <label > Slot Name</label>
                         <input type="text" className='w-full' name='SlotName' placeholder='Slot Name'  />   
                            
                     </div>
