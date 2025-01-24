@@ -1,6 +1,6 @@
 import {
-    createBrowserRouter,
-  } from "react-router-dom";
+  createBrowserRouter,
+} from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home";
 import Login from "../components/Authlayout/Login";
@@ -20,111 +20,130 @@ import Community from "../Pages/Community";
 import AppliedTrainer from "../Pages/Dashboard/AdminPage/AppliedTrainer";
 import AppliedTrainerDetails from "../Pages/Dashboard/AdminPage/AppliedTrainerDetails";
 import AdminRoute from "./AdminRoute";
+import TrainerRoute from "./TrainerRoute";
+import ManageSlots from "../Pages/Dashboard/TrainerPages/ManageSlots";
+import AddNewSlot from "../Pages/Dashboard/TrainerPages/AddNewSlot";
 
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      children: [
-        {
-            path:'/',
-            element: <Home></Home>
-        },
-        {
-          path: 'allTrainer',
-          element: <AllTrainer></AllTrainer>
-        },
-        {
-          path: '/trainer/:id',
-          element: <PrivateRoute>
-            <TrainerDetails></TrainerDetails>
-          </PrivateRoute>,
-          
-        },
-        {
-          path: 'allClasses',
-          element: <AllClasses></AllClasses>
-        },
-        {
-          path: 'trainerBooked',
-          element: <TrainerBooked></TrainerBooked>
-        },
-        {
-          path: "community",
-          element: <Community></Community>
-        },
-        {
-          path: 'beTrainer',
-          element: <BeTrainer></BeTrainer>
-        },
-        {
-          path: 'login',
-          element: <Login></Login>
-        },
-        {
-          path: 'register',
-          element: <Register></Register>
-        },
-            
-      ]
-    },
-    {
-      path: 'dashboard',
-      element: <PrivateRoute>
-        <Dashboard></Dashboard>
-      </PrivateRoute>,
-      children: [
-        // admin routes 
-        {
-          index: true,
-          path: 'allNewsletter',
-          element: <PrivateRoute>
-            <AdminRoute>
-            <AllNewsletter></AllNewsletter> 
-            </AdminRoute>
-          </PrivateRoute>
-        },
-        {
-          path: 'adTrainers',
-          element: <PrivateRoute>
-            <AdminRoute>
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: 'allTrainer',
+        element: <AllTrainer></AllTrainer>
+      },
+      {
+        path: '/trainer/:id',
+        element: <PrivateRoute>
+          <TrainerDetails></TrainerDetails>
+        </PrivateRoute>,
+
+      },
+      {
+        path: 'allClasses',
+        element: <AllClasses></AllClasses>
+      },
+      {
+        path: 'trainerBooked',
+        element: <TrainerBooked></TrainerBooked>
+      },
+      {
+        path: "community",
+        element: <Community></Community>
+      },
+      {
+        path: 'beTrainer',
+        element: <BeTrainer></BeTrainer>
+      },
+      {
+        path: 'login',
+        element: <Login></Login>
+      },
+      {
+        path: 'register',
+        element: <Register></Register>
+      },
+
+    ]
+  },
+  {
+    path: 'dashboard',
+    element: <PrivateRoute>
+      <Dashboard></Dashboard>
+    </PrivateRoute>,
+    children: [
+      // admin routes 
+      {
+        index: true,
+        path: 'allNewsletter',
+        element: <PrivateRoute>
+          <AdminRoute>
+            <AllNewsletter></AllNewsletter>
+          </AdminRoute>
+        </PrivateRoute>
+      },
+      {
+        path: 'adTrainers',
+        element: <PrivateRoute>
+          <AdminRoute>
             <AllTrainersAm></AllTrainersAm>
-            </AdminRoute>
-          </PrivateRoute>
-        },
-        {
-          path: 'appliey',
-          element: <PrivateRoute>
-          <AdminRoute>
-          <AppliedTrainer></AppliedTrainer>
           </AdminRoute>
-        </PrivateRoute>  
-        },
-        {
-          path:'/dashboard/trainer/:id',
-          element:  <PrivateRoute>
+        </PrivateRoute>
+      },
+      {
+        path: 'appliey',
+        element: <PrivateRoute>
           <AdminRoute>
-          <AppliedTrainerDetails></AppliedTrainerDetails>
+            <AppliedTrainer></AppliedTrainer>
           </AdminRoute>
-        </PrivateRoute> 
-        },
-        {
-          path: 'addClass',
-          element:  <PrivateRoute>
+        </PrivateRoute>
+      },
+      {
+        path: '/dashboard/trainer/:id',
+        element: <PrivateRoute>
           <AdminRoute>
-          <AddClass></AddClass>
+            <AppliedTrainerDetails></AppliedTrainerDetails>
           </AdminRoute>
-        </PrivateRoute> 
-        },
-        {
-          path: 'addForum',
-          element: <AddForum></AddForum>
-        },
-        // trainer Route
-      ]
-    },
+        </PrivateRoute>
+      },
+      {
+        path: 'addClass',
+        element: <PrivateRoute>
+          <AdminRoute>
+            <AddClass></AddClass>
+          </AdminRoute>
+        </PrivateRoute>
+      },
+      {
+        path: 'addForum',
+        element: <AddForum></AddForum>
+      },
+      // trainer Route
+      {
+        path: 'manageSlots',
+        element: <PrivateRoute>
+          <TrainerRoute>
+            <ManageSlots></ManageSlots>
+          </TrainerRoute>
+        </PrivateRoute>
+      },
+      {
+        path: 'addNewSlot',
+        element: <PrivateRoute>
+          <TrainerRoute>
+            <AddNewSlot></AddNewSlot>
+          </TrainerRoute>
+        </PrivateRoute>
+      }
+    ]
+  },
 
-  ]);
-  
-  export default router;
+]);
+
+export default router;

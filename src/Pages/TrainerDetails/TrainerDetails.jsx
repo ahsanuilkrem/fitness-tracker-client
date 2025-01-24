@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Card } from 'flowbite-react';
 import { Helmet } from 'react-helmet-async';
 import { Link, useParams } from 'react-router-dom';
+import useAddSlot from '../../hooks/useAddSlot';
 
 
 
@@ -12,8 +13,8 @@ import { Link, useParams } from 'react-router-dom';
 
 
 const TrainerDetails = () => {
-    const { id } = useParams()
-
+    const [slote] = useAddSlot();
+    const { id } = useParams();
     const { data: trainer = [] } = useQuery({
         queryKey: ["trainer", id],
         queryFn: async () => {
@@ -23,6 +24,7 @@ const TrainerDetails = () => {
     })
     console.log(trainer);
     const { name, photo, experience, selectredOption = [], selectedSkills, time, hour, biography, _id } = trainer || [];
+
 
     return (
         <>
@@ -53,7 +55,16 @@ const TrainerDetails = () => {
                                 {/*  */}
                                 <div className='p-10'>
                                     <h4 className="text-xl font-medium">Available Slots:</h4>
-                                    <ul>
+
+                                    <div>
+                                        {
+                                            slote.map(slot => <ul key={slot._id} className='flex gap-1'>
+                                                <li>{slot.selectredOption.map((day, index) => <p key={index}>{day.label}</p>)}</li>
+                                                <li>{slot.time}</li>
+                                            </ul>)
+                                        }
+                                    </div>
+                                    {/* <ul>
                                         {selectredOption.length > 0 ? (
                                             selectredOption.map((slot, index) => (
                                                 <Link to='/trainerBooked'>
@@ -63,7 +74,7 @@ const TrainerDetails = () => {
                                         ) : (
                                             <li>No available slots</li>
                                         )}
-                                    </ul>
+                                    </ul> */}
                                     <div className='mt-8'>
                                     <p> <span  className='text-xl font-medium'>Skill:</span>
                                     {selectedSkills?.map(skills => <li>{skills}</li>)}</p>

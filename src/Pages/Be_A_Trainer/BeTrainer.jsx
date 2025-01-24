@@ -45,7 +45,7 @@ const BeTrainer = () => {
     };
 
 
-    const handleSubmite = e => {
+    const handleSubmite = (e) => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
@@ -77,6 +77,8 @@ const BeTrainer = () => {
             }
                     
        });
+
+      
 
        
     }

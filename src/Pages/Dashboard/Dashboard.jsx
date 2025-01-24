@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FaHome } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 import useRole from '../../hooks/useRole';
 
@@ -31,8 +30,8 @@ const Dashboard = () => {
            
                 
               {role === 'trainer' && <>
-                <li><NavLink to='/dashboard/Manage Slots'>Manage Slots</NavLink> </li>
-                <li><NavLink to='/dashboard/adTrainers'>Add New slot</NavLink> </li>
+                <li><NavLink to='/dashboard/manageSlots'>Manage Slots</NavLink> </li>
+                <li><NavLink to='/dashboard/addNewSlot'>Add New slot</NavLink> </li>
                 <li><NavLink to='/dashboard/addForum'>Add Forum</NavLink> </li>
               </> }
 
