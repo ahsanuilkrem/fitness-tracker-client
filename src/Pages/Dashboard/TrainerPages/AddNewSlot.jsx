@@ -18,7 +18,6 @@ const options = [
 const AddNewSlot = () => {
     const { user } = useAuth()
     const axiosSecure = useAxiosSecure();
-    // const axiosPublic = useAxiosPublic();
     const [selectredOption, setSelectedOption] = useState([]);
 
 

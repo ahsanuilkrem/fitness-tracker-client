@@ -25,7 +25,9 @@ const SocialLogin = () => {
             })
             .catch(error => {
                 console.log(error)
+                
             })
+           
         } )
     }
     return (

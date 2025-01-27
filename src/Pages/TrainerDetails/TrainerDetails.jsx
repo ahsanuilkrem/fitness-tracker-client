@@ -1,26 +1,26 @@
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
 import { Card } from 'flowbite-react';
 import { Helmet } from 'react-helmet-async';
 import { Link, useParams } from 'react-router-dom';
 import useAddSlot from '../../hooks/useAddSlot';
+import useAxiosSecure from '../../hooks/useAxiosSecure';
 
 
 const TrainerDetails = () => {
     const [slote] = useAddSlot();
+    const axiosSecure = useAxiosSecure();
     const { id } = useParams();
-    const { data: trainer = [] } = useQuery({
+    const { data: trainer = [], isLoading } = useQuery({
         queryKey: ["trainer", id],
         queryFn: async () => {
-            const { data } = await axios.get(`http://localhost:5000/trainer/${id}`, {
-                headers: {
-                    authorization: `Bearer ${localStorage.getItem('access-token')}`
-                }
-            })
+            const { data } = await axiosSecure(`/trainer/${id}`)
+            
             return data;
+           
         }
+      
     })
-    // console.log(trainer);
+     console.log(trainer);
     const { name, photo, experience, selectredOption = [], selectedSkills, time, hour, biography, _id } = trainer || [];
 
 
@@ -77,7 +77,7 @@ const TrainerDetails = () => {
                                     </ul> */}
                                     <div className='mt-8'>
                                     <p> <span  className='text-xl font-medium'>Skill:</span>
-                                    {selectedSkills?.map(skills => <li>{skills}</li>)}</p>
+                                    {selectedSkills?.map((skills, index) => <li key={index}>{skills}</li>)}</p>
                                     </div>
                                 </div>
                             </div>

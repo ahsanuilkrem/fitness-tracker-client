@@ -31,6 +31,7 @@ export const AuthContext = createContext(null);
     const googleSignin = () => {
         setLoading(true);
         return signInWithPopup(auth, googleProvider);
+     
     }
 
     const updateUserProfile = (name, photo) => {
@@ -70,9 +71,10 @@ export const AuthContext = createContext(null);
         loading,
         currentuser,
         signIn,
+        googleSignin,
         logOut,
         updateUserProfile,
-        googleSignin,
+        
     }
 
 

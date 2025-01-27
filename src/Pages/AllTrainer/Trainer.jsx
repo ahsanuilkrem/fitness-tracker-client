@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Trainer = ({ trainer }) => {
     const { name, photo, experience, selectredOption, time, _id } = trainer || [];
-    console.log(trainer)
+    // console.log(trainer)
     return (
         <div>
                <Card
@@ -18,7 +18,7 @@ const Trainer = ({ trainer }) => {
                 <ul>
                     <h5 className='text-[18px] font-bold'>Available Slots: </h5>
                     {
-                        selectredOption.map(option  => <li>{option.label} {time} </li>)
+                        selectredOption.map((option, index) => <li key={index} >{option.label} {time} </li>)
                     } 
                 </ul>
                      <Link to={`/trainer/${_id}`}>
