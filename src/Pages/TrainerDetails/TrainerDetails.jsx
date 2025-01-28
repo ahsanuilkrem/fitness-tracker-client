@@ -64,17 +64,7 @@ const TrainerDetails = () => {
                                             </ul>)
                                         }
                                     </div>
-                                    {/* <ul>
-                                        {selectredOption.length > 0 ? (
-                                            selectredOption.map((slot, index) => (
-                                                <Link to='/trainerBooked'>
-                                                    <li key={index} className='hover:text-sky-500'>{slot.label} {time}  </li>
-                                                </Link>
-                                            ))
-                                        ) : (
-                                            <li>No available slots</li>
-                                        )}
-                                    </ul> */}
+                                 
                                     <div className='mt-8'>
                                     <p> <span  className='text-xl font-medium'>Skill:</span>
                                     {selectedSkills?.map((skills, index) => <li key={index}>{skills}</li>)}</p>

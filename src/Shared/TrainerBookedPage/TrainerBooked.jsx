@@ -16,7 +16,7 @@ const TrainerBooked = () => {
         }
     })
     console.log(slote)
-    const { name, SlotName, Class } = slote;
+    const { name, SlotName, Class, _id } = slote;
     return (
         <div className='pt-24'>
 
@@ -76,7 +76,7 @@ const TrainerBooked = () => {
                         </tbody>
                     </table>
                     <div>
-                        <Link to='/payment'>
+                        <Link to={`/payment/${_id}`}>
                         <button className="btn">Join Now</button>
                         </Link>
                     </div>

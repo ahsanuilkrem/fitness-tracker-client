@@ -37,9 +37,9 @@ const Dashboard = () => {
 
               
               {role === 'member' && <>
-                <li><NavLink to='/dashboard/Activity Log page'>Activity Log page</NavLink> </li>
-                <li><NavLink to='/dashboard/adTrainers'>Profile Page</NavLink> </li>
-                <li><NavLink to='/dashboard/'>Booked Trainer</NavLink> </li>
+                <li><NavLink to='/dashboard/activity'>Activity Log page</NavLink> </li>
+                <li><NavLink to='/dashboard/profile'>Profile Page</NavLink> </li>
+                <li><NavLink to='/dashboard/bookedTrainer'>Booked Trainer</NavLink> </li>
               </> }
 
 

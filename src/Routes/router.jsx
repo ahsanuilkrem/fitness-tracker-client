@@ -25,6 +25,9 @@ import ManageSlots from "../Pages/Dashboard/TrainerPages/ManageSlots";
 import AddNewSlot from "../Pages/Dashboard/TrainerPages/AddNewSlot";
 import ErrorPage from "../Pages/ErrorPage";
 import Payment from "../Pages/Dashboard/Payment";
+import ActivitLog from "../Pages/Dashboard/Memberpage/ActivitLog";
+import UserProfile from "../Pages/Dashboard/Memberpage/UserProfile";
+import BookedTrainer from "../Pages/Dashboard/Memberpage/BookedTrainer";
 
 
 const router = createBrowserRouter([
@@ -65,7 +68,7 @@ const router = createBrowserRouter([
         element: <BeTrainer></BeTrainer>
       },
       {
-        path : 'payment',
+        path : '/payment/:id',
         element: <Payment></Payment>
       },
       {
@@ -147,6 +150,19 @@ const router = createBrowserRouter([
             <AddNewSlot></AddNewSlot>
           </TrainerRoute>
         </PrivateRoute>
+      },
+      //  Member route
+      {
+        path: 'activity',
+        element: <ActivitLog></ActivitLog>
+      },
+      {
+        path: 'profile',
+        element: <UserProfile></UserProfile>
+      },
+      {
+        path: 'bookedTrainer',
+        element: <BookedTrainer></BookedTrainer>
       }
     ]
   },

@@ -4,37 +4,54 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+import useAxiosPublic from '../../hooks/useAxiosPublic';
+import { useQuery } from '@tanstack/react-query';
+import { Card } from 'flowbite-react';
 
 const Reviews = () => {
+    const axiosPublic = useAxiosPublic();
+    const { data: reviews = [] } = useQuery({
+        queryKey: ["reviews"],
+        queryFn: async () => {
+            const { data } = await axiosPublic('/review')
+            return data;
+        }  
+       
+    })
+    console.log(reviews);
 
 
     return (
-        <div>
-            <h2 className="text-3xl font-bold text-center">review</h2>
+        <div className='my-14'>
+                  <h2 className='text-2xl font-bold text-center mb-4'> Testimonials or Reviews</h2> 
             <div>
-            <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper my-10"
-      >
-        <SwiperSlide>
-            <div>
-                <h2> Testimonials or Reviews:</h2>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
+                <Swiper
+                    slidesPerView={3}
+                    spaceBetween={30}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[Pagination]}
+                    className="mySwiper  p-4"
+                >
+                    
+                    {
+                        reviews.map(review => <SwiperSlide key={review}>
+                            <Card className= ' flex justify-center items-start text-center h-60 space-y-2 bg-gray-300'>
+                              <div className='flex justify-center items-center'>
+                              <img src={review.usre} alt="" srcset="" className='w-12 h-12 rounded-full' />
+                              </div>
+                                <p className='max-w-xs mx-auto'>{review.review} </p>
+                                <div className='flex gap-1 justify-center items-center'>
+                                    <h3>Rating:</h3>
+                                    {review.rating}
+                                  
+                                </div>
+                            </Card>
+                        </SwiperSlide>)
+                    }
+                   
+                </Swiper>
             </div>
         </div>
     );
