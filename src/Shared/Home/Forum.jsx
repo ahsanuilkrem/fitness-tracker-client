@@ -7,6 +7,9 @@ const Forum = () => {
     const [community] = useForum();
     // console.log(community);
     return (
+        <div>
+            <h3 className='text-2xl font-bold text-center'> Discover Our Latest News </h3>
+        
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4 my-5'>
             {
                 community.slice(2, 8).map(communit => <Card key={communit._id} className="max-w-sm">
@@ -21,6 +24,7 @@ const Forum = () => {
                     </div>
                 </Card>)
             }
+        </div>
         </div>
     );
 };

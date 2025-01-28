@@ -1,27 +1,20 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import useAxiosSecure from '../../hooks/useAxiosSecure';
-import { useQuery } from '@tanstack/react-query';
+
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+import CheckoutForm from './CheckoutForm';
+
+
+
+const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_pk);
+
 
 const Payment = () => {
-  // const axiosSecure = useAxiosSecure();
-  //  const { id } = useParams();
-  // // console.log(id)
-  // const { data: trainer = [], isLoading } = useQuery({
-  //     queryKey: ["trainer", id],
-  //     queryFn: async () => {
-  //         const { data } = await axiosSecure(`/trainer/${id}`)
-         
-  //          return data;
-        
-  //     }
-      
-  // })
 
-  //  console.log(trainer);
     return (
-        <div>
-          payment
+        <div className='pt-20'>
+         <Elements stripe={stripePromise}>
+            <CheckoutForm></CheckoutForm>
+         </Elements>
         </div>
     );
 };

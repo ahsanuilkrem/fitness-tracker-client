@@ -61,7 +61,7 @@ const BeTrainer = () => {
 
         const addform = {name, email, photo, age, selectedSkills, experience, selectredOption, time, hour, biography};
 
-        axios.post('http://localhost:5000/trainer', addform)
+        axios.post('https://fitness-tracker-server-sigma.vercel.app/trainer', addform)
         .then(res => {
             console.log(res.data)
             if(res.data.insertedId){

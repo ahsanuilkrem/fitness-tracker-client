@@ -10,7 +10,7 @@ const OurTeam = () => {
             <h2 className='text-3xl font-bold text-center my-10'> Our Team</h2>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 justify-center items-center'>
                 {
-                    trainers.slice(2, 5).map(trainer => <div key={trainer._id} >
+                    trainers.slice(0, 3).map(trainer => <div key={trainer._id} >
                         <Card className="max-w-sm" >
                               <img src={trainer.photo} className='w-96 h-72 rounded-md' alt="" />
                            

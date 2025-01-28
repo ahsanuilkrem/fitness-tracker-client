@@ -5,6 +5,8 @@ const Community = () => {
     const [community] = useForum();
     console.log(community);
     return (
+        <div>
+            
         <div className='pt-14 max-w-6xl mx-auto'>
             {
                 community.map(communit => <div key={communit._id}>
@@ -19,6 +21,7 @@ const Community = () => {
                     </div>
                 </div>)
             }
+        </div>
         </div>
     );
 };

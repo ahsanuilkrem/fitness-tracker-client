@@ -7,7 +7,7 @@ const AllNewsletter = () => {
     const { data: newsletter = [] } = useQuery({
         queryKey: ["newsletter"],
         queryFn: async () => {
-            const { data } = await axios.get('http://localhost:5000/newsletter')
+            const { data } = await axios.get('https://fitness-tracker-server-sigma.vercel.app/newsletter')
             return data;
         }
     })

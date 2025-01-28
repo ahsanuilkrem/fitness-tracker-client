@@ -11,7 +11,7 @@ const TrainerBooked = () => {
     const { data: slote = [] } = useQuery({
         queryKey: ["slote", id],
         queryFn: async () => {
-            const { data } = await axios.get(`http://localhost:5000/addSlot/${id}`)
+            const { data } = await axios.get(`https://fitness-tracker-server-sigma.vercel.app/addSlot/${id}`)
             return data;
         }
     })

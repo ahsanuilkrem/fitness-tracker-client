@@ -15,7 +15,7 @@ const AppliedTrainerDetails = () => {
     const { data: trainer = [], reset } = useQuery({
         queryKey: ["applied", id],
         queryFn: async () => {
-            const { data } = await axios.get(`http://localhost:5000/trainer/${id}`)
+            const { data } = await axios.get(`https://fitness-tracker-server-sigma.vercel.app/trainer/${id}`)
             return data;
         }
     })
