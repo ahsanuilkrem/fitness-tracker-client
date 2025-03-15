@@ -23,7 +23,7 @@ const Dashboard = () => {
                 <li><NavLink to='/dashboard/allNewsletter'>All Newsletter </NavLink> </li>
                 <li><NavLink to='/dashboard/adTrainers'>All Trainers</NavLink> </li>
                 <li><NavLink to='/dashboard/appliey'>Applied Trainer </NavLink> </li>
-                <li><NavLink to='/dashboard/Balance'>Balance</NavLink> </li>
+                <li className='hidden'><NavLink to='/dashboard/Balance'>Balance</NavLink> </li>
                 <li><NavLink to='/dashboard/addClass'>Add Class</NavLink> </li>
                 <li><NavLink to='/dashboard/addForum'>Add Forum</NavLink> </li>
               </> }
