@@ -18,8 +18,8 @@ const Forum = () => {
                             <img src={communit.image} className='w-full rounded-xl h-72'  alt="" srcset="" />
                         </div>
                         <div className=''>
-                        <h2 className='text-xl font-bold my-2'>{communit.title}</h2>
-                        <p className='text-[18px] font-normal my-2'>{communit.details.slice(0, 100)}...<Link to='/community'>more</Link> </p>
+                        <h2 className='text-xl text-black font-bold my-2'>{communit.title}</h2>
+                        <p className='text-[18px] text-black font-normal my-2'>{communit.details.slice(0, 100)}...<Link to='/community'>more</Link> </p>
                         </div>
                     </div>
                 </Card>)

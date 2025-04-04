@@ -78,8 +78,8 @@ const TrainerDetails = () => {
                         <Card className='w-full text-center py-7'>
                             <h2 className='uppercase text-xl font-medium  text-pink-400'>Gat stsrted now</h2>
                            <div className='flex justify-center items-center'> <img src={photo} className='w-10 h-10 rounded-full' alt="" srcset="" /></div>
-                            <h1 className='text-3xl font-bold'>Discover your skills with us</h1>
-                            <p className='text-[16px] font-normal'> join with experienced dedicated FitVessel Team</p>
+                            <h1 className='text-3xl text-black font-bold'>Discover your skills with us</h1>
+                            <p className='text-[16px] text-black font-normal'> join with experienced dedicated FitVessel Team</p>
                           <div>
                             <Link to='/beTrainer'>
                             <button className='btn btn-wide bg-black text-white '> Be A Trainer </button>

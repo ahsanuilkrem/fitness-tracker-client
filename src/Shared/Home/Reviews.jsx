@@ -41,9 +41,9 @@ const Reviews = () => {
                               <div className='flex justify-center items-center'>
                               <img src={review.usre} alt="" srcset="" className='w-12 h-12 rounded-full' />
                               </div>
-                                <p className='max-w-xs mx-auto'>{review.review} </p>
+                                <p className='max-w-xs mx-auto text-black font-normal'>{review.review} </p>
                                 <div className='flex gap-1 justify-center items-center'>
-                                    <h3>Rating:</h3>
+                                    <h3 className='text-black font-normal'>Rating:</h3>
                                     {review.rating}
                                   
                                 </div>

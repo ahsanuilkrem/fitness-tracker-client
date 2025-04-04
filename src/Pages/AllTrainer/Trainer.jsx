@@ -14,9 +14,9 @@ const Trainer = ({ trainer }) => {
                 <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {name}
                 </h3>
-                <h5 className='text-[18px] font-bold'> Years of Experience: {experience} </h5>
-                <ul>
-                    <h5 className='text-[18px] font-bold'>Available Slots: </h5>
+                <h5 className='text-[18px] text-black font-bold'> Years of Experience: {experience} </h5>
+                <ul className='text-black'>
+                    <h5 className='text-[18px] text-black font-bold'>Available Slots: </h5>
                     {
                         selectredOption.map((option, index) => <li key={index} >{option.label} {time} </li>)
                     } 

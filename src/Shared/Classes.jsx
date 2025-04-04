@@ -16,12 +16,12 @@ const Classes = ({ classe }) => {
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {name}
                 </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-400">
+                <p className="font-normal text-black dark:text-gray-400">
                     {details.slice(0, 65)}...
                 </p>
 
-                <h2 className='text-xl font-medium '>Trainer who took this class</h2>
-                <div className='flex gap-3'>
+                <h2 className='text-xl text-black font-medium '>Trainer who took this class</h2>
+                <div className='flex gap-3 text-black'>
                     <div>
                     {ishovered1 && (
                             <span className='absolute -mt-6'>{name}</span>

@@ -2,7 +2,7 @@ import React from 'react';
 import Navber from '../Shared/Navber';
 import { NavLink, Outlet } from 'react-router-dom';
 import { Footer } from 'flowbite-react';
-import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
+import { BsDiscord, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 
 
 const Main = () => {
@@ -14,7 +14,7 @@ const Main = () => {
         <Outlet></Outlet>
       </div>
       <div className='my-10'>
-        <Footer>
+        <Footer >
           <div className="w-full bg-black text-white p-4 ">
             <div className="grid w-full grid-cols-1 justify-around  md:flex items-center md:grid-cols-1">
               <div>
@@ -26,7 +26,7 @@ const Main = () => {
                 />
               </div>
               <div className="grid grid-cols-1 gap-4  md:gap-14 sm:my-4 md:grid-cols-3 ">
-                <div>
+                <div className='text-white'>
                   <Footer.Title title="Quick Links" />
                   <Footer.LinkGroup col>
                     <Footer.Link > <li><NavLink to='/'>Home </NavLink></li></Footer.Link>
@@ -59,7 +59,7 @@ const Main = () => {
                     <Footer.Link >o1642904811</Footer.Link>
                   </Footer.LinkGroup>
                   <Footer.LinkGroup>
-                    <Footer.Link href="#">mejan6796@gmail.com</Footer.Link>
+                    <Footer.Link href="#">ahsanulkarim429@gmail.com</Footer.Link>
                   </Footer.LinkGroup>
                   <Footer.LinkGroup>
                     <Footer.Link href="#">Chittagong Bangladesh</Footer.Link>
@@ -74,8 +74,8 @@ const Main = () => {
                 <Footer.Icon href="#" icon={BsFacebook} />
                 <Footer.Icon href="#" icon={BsInstagram} />
                 <Footer.Icon href="#" icon={BsTwitter} />
-                <Footer.Icon href="#" icon={BsGithub} />
-                <Footer.Icon href="#" icon={BsDribbble} />
+                <Footer.Icon href="https://github.com/ahsanuilkrem" icon={BsGithub} />
+                <Footer.Icon href="#" icon={BsDiscord} />
               </div>
             </div>
           </div>

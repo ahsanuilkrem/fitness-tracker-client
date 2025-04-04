@@ -88,12 +88,12 @@ const BeTrainer = () => {
             <form onSubmit={handleSubmite} className='bg-slate-500'>
                 <div className='md:flex  w-full gap-4 p-3'>
                     <div className='md:w-1/2'>
-                        <label >Name</label>
+                        <label className='text-black font-medium'>Name</label>
                         <input type="text" className='w-full' name='name' placeholder="name" />
 
                     </div>
                     <div className='md:w-1/2'>
-                        <label >Email</label>
+                        <label className='text-black font-medium' >Email</label>
                         <input type="email" className='w-full' defaultValue={user?.email}
                          name='email' placeholder="email" disabled />
 
@@ -101,62 +101,58 @@ const BeTrainer = () => {
                 </div>
                 <div className='md:flex  w-full gap-4 p-3'>
                     <div className='  md:w-1/2'>
-                        <label >Photo URL</label>
+                        <label className='text-black font-medium' >Photo URL</label>
                         <input type="url" className='w-full' name='photo' placeholder="photo Url" />
                     </div>
                     <div className='md:w-1/2'>
-                        <label >Age</label>
+                        <label className='text-black font-medium'>Age</label>
                         <input type="number" className='w-full' name='age' placeholder="age" />
                     </div>
                 </div>
                 <div className=' w-full p-3'>
-                    <label className='text-white text-xl font-bold'>Skills:</label>
+                    <label className='text-black text-xl font-bold'>Skills:</label>
                     <div className='flex flex-wrap gap-4'>
 
                         <div className="flex items-center gap-1">
-                            <label for="valid1" className=''>Hit Blast</label>
+                            <label for="valid1" className='text-black'>Hit Blast</label>
                             <input type="checkbox" id="valid1" name='skills1'
                             value="Hit Blast" onChange={handleCheckboxChange} />
                         </div>
                         <div className="flex items-center gap-1">
-                            <label for="valid2" className=''>Yoga Flow </label>
+                            <label for="valid2" className='text-black'>Yoga Flow </label>
                             <input type="checkbox" id='valid2' name='skills2'
                              value="Yoga Flow" onChange={handleCheckboxChange} />
 
                         </div>
                         <div className="flex items-center gap-1">
-                            <label fro='valid3'>Pilates Core</label>
+                            <label fro='valid3'className='text-black'>Pilates Core</label>
                             <input type="checkbox" id='valid3' name='skills3'
                             onChange={handleCheckboxChange} value="Pilates Core" />
                         </div>
                         <div className="flex items-center gap-1">
-                            <label fro='valid4' >Cardio Kickboxing</label>
+                            <label fro='valid4' className='text-black'>Cardio Kickboxing</label>
                             <input type="checkbox" id='valid4' name='skills4'
                              onChange={handleCheckboxChange} value="Cardio Kickboxing" />
                         </div>
 
                         <div className="flex items-center gap-1">
-                            <label fro='valid5' >Zumba Dance</label>
+                            <label fro='valid5' className='text-black' >Zumba Dance</label>
                             <input type="checkbox" id='valid5' name='skills' 
                              onChange={handleCheckboxChange} value="Zumba Dance" />
                         </div>
                         <div className="flex items-center gap-1">
-                            <label fro='valid6'>Spin Cycle</label>
+                            <label fro='valid6' className='text-black' >Spin Cycle</label>
                             <input type="checkbox" id='valid6' name='skills'
                             onChange={handleCheckboxChange} value='Spin Cycle' />
                         </div>
+                          
                         <div className="flex items-center gap-1">
-                            <label fro='valid7'>Barre Fitness</label>
-                            <input type="checkbox" id='valid7' name='skills'
-                            onChange={handleCheckboxChange} value='Barre Fitness' />
-                        </div>
-                        <div className="flex items-center gap-1">
-                            <label fro='valid8'>Meditation and Mindfulness</label>
+                            <label fro='valid8' className='text-black'>Meditation and Mindfulness</label>
                             <input type="checkbox" id='valid8' name='skills'
                             onChange={handleCheckboxChange} value='Meditation and Mindfulness' />
                         </div>
                         <div className="flex items-center gap-1">
-                            <label fro='valid9'>CrossFit Fundamentais</label>
+                            <label fro='valid9' className='text-black'>CrossFit Fundamentais</label>
                             <input type="checkbox" id='valid9' name='skills'
                             onChange={handleCheckboxChange} value='CrossFit Fundamentais' />
                         </div>
@@ -166,12 +162,12 @@ const BeTrainer = () => {
                 </div>
                 <div className='md:flex  w-full gap-4 p-3'>
                     <div className='  md:w-1/2'>
-                        <label >Years of Experience</label>
+                        <label className='text-black font-medium'>Years of Experience</label>
                         <input type="text" className='w-full' name='experience' placeholder="Years of Experience" />
                     </div>
                     <div className='md:w-1/2'>
                         <div className=" block">
-                            <label >Available days</label>
+                            <label className='text-black font-medium' >Available days</label>
                         </div>
                         <Select isMulti={true} options={options} onChange={handleSelect} value={selectredOption} className='w-full'  >
 
@@ -180,7 +176,7 @@ const BeTrainer = () => {
                 </div>
                 <div className='md:flex  w-full gap-4 p-3'>
                     <div className='  md:w-1/2'>
-                        <label >Available time</label>
+                        <label  className='text-black font-medium'>Available time</label>
                         <select className='w-full' name='time' placeholder="Available time" >
                             <option value="Morning 6:00 AM - 12:00 PM">Morning 6:00 AM - 12:00 PM</option>
                             <option value="Noon 12:00 PM - 3:00 PM">Noon 12:00 PM - 3:00 PM</option>
@@ -190,19 +186,19 @@ const BeTrainer = () => {
                         </select>
                     </div>
                     <div className='md:w-1/2'>
-                        <label >Class Duration (Hour)</label>
+                        <label className='text-black font-medium' >Class Duration (Hour)</label>
                         <input type="number" max='8' className='w-full' name='hour' placeholder="Class Duration" />
                     </div>
                 </div>
                 <div className=' w-full  p-3'>
                     <div className="">
-                        <label >Biography</label>
+                        <label className='text-black font-medium'>Biography</label>
                     </div>
                     <textarea className='w-full' name='biography' placeholder="Biography" rows={3} />
 
                 </div>
                 <div className='w-full p-3'>
-                    <input type="submit" className='w-full btn'></input>
+                    <input type="submit" className='w-full btn font-medium text-white'></input>
                 </div>
             </form>
         </div>

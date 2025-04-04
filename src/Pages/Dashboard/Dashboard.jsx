@@ -20,26 +20,26 @@ const Dashboard = () => {
 
             
               {role === 'admin' && <>
-                <li><NavLink to='/dashboard/allNewsletter'>All Newsletter </NavLink> </li>
-                <li><NavLink to='/dashboard/adTrainers'>All Trainers</NavLink> </li>
-                <li><NavLink to='/dashboard/appliey'>Applied Trainer </NavLink> </li>
-                <li className='hidden'><NavLink to='/dashboard/Balance'>Balance</NavLink> </li>
-                <li><NavLink to='/dashboard/addClass'>Add Class</NavLink> </li>
-                <li><NavLink to='/dashboard/addForum'>Add Forum</NavLink> </li>
+                <li className='text-black font-medium'><NavLink to='/dashboard/allNewsletter'>All Newsletter </NavLink> </li>
+                <li className='text-black font-medium'><NavLink to='/dashboard/adTrainers'>All Trainers</NavLink> </li>
+                <li className='text-black font-medium'><NavLink to='/dashboard/appliey'>Applied Trainer </NavLink> </li>
+                <li className='hidden text-black font-medium'><NavLink to='/dashboard/Balance'>Balance</NavLink> </li>
+                <li className='text-black font-medium'><NavLink to='/dashboard/addClass'>Add Class</NavLink> </li>
+                <li className='text-black font-medium'><NavLink to='/dashboard/addForum'>Add Forum</NavLink> </li>
               </> }
            
                 
               {role === 'trainer' && <>
-                <li><NavLink to='/dashboard/manageSlots'>Manage Slots</NavLink> </li>
-                <li><NavLink to='/dashboard/addNewSlot'>Add New slot</NavLink> </li>
-                <li><NavLink to='/dashboard/addForum'>Add Forum</NavLink> </li>
+                <li className='text-black font-medium'><NavLink to='/dashboard/manageSlots'>Manage Slots</NavLink> </li>
+                <li className='text-black font-medium'><NavLink to='/dashboard/addNewSlot'>Add New slot</NavLink> </li>
+                <li className='text-black font-medium'><NavLink to='/dashboard/addForum'>Add Forum</NavLink> </li>
               </> }
 
               
               {role === 'member' && <>
-                <li><NavLink to='/dashboard/activity'>Activity Log page</NavLink> </li>
-                <li><NavLink to='/dashboard/profile'>Profile Page</NavLink> </li>
-                <li><NavLink to='/dashboard/bookedTrainer'>Booked Trainer</NavLink> </li>
+                <li className='text-black font-medium'><NavLink to='/dashboard/activity'>Activity Log page</NavLink> </li>
+                <li className='text-black font-medium'><NavLink to='/dashboard/profile'>Profile Page</NavLink> </li>
+                <li className='text-black font-medium'><NavLink to='/dashboard/bookedTrainer'>Booked Trainer</NavLink> </li>
               </> }
 
 
@@ -47,9 +47,9 @@ const Dashboard = () => {
 
 
             <div className="divider"></div>
-            <li><NavLink to='/'>Home</NavLink> </li>
-            <li><NavLink to='/allTrainer'> Trainers</NavLink> </li>
-            <li><NavLink to='/allClasses'> Classes</NavLink> </li>
+            <li className='text-black font-medium'><NavLink to='/'>Home</NavLink> </li>
+            <li className='text-black font-medium'><NavLink to='/allTrainer'> Trainers</NavLink> </li>
+            <li className='text-black font-medium'><NavLink to='/allClasses'> Classes</NavLink> </li>
 
 
           </ul>

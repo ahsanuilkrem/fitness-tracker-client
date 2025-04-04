@@ -40,7 +40,7 @@ const Newsletter = () => {
 
 
         <div className='form-control w-full '>
-          <label className='label text-xl font-medium'> Name</label>
+          <label className='label text-black text-xl font-medium'> Name</label>
           <input  {...register("name", { required: true })}
             type='text'
             placeholder='Name'
@@ -49,15 +49,15 @@ const Newsletter = () => {
         </div>
 
         <div className='form-control w-full '>
-          <label className='label text-xl font-medium'>Email</label>
+          <label className='label text-xl text-black font-medium'>Email</label>
           <input  {...register("email", { required: true })}
             type='email'
-            placeholder='email'
+            placeholder='Email'
             className='input input-bordered w-full '
           />
         </div>
         <div className='flex justify-center items-center'>
-          <button className='btn btn-wide btn-neutral mt-3' type="submit"> Subscribe Now </button>
+          <button className='btn btn-wide text-white btn-neutral mt-3' type="submit"> Subscribe Now </button>
         </div>
 
       </form>

@@ -17,8 +17,8 @@ const OurTeam = () => {
                             <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                 {trainer.name}
                             </h3>
-                                <p> Years of Experience: {trainer.experience}</p>
-                            <p>Biography:{trainer.biography.slice(0, 50)}...</p>
+                                <p className='text-black'> Years of Experience: {trainer.experience}</p>
+                            <p className='text-black'>Biography:{trainer.biography.slice(0, 50)}...more</p>
                            
                         </Card>
                     </div>)
